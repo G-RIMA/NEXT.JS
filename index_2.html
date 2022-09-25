@@ -1,0 +1,31 @@
+<!-- starting with react -->
+<html>
+  <body>
+    <div id="app"></div>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Babel Script -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
+        const app = document.getElementById("app")
+      
+        // React components should be capitalized to distinguish them from plain HTML and JavaScript
+        function Header() {
+            return <h1>Develop. Preview. Ship. 🚀</h1>;
+        }
+        function HomePage() {
+            return (
+                <div>
+                    {/* Nesting the Header component */}
+                    <Header />
+                </div>;
+            );
+        }
+        // To render this component to the DOM, you can pass it as the first argument in the ReactDOM.render() method
+        // since <HomePage> is now your top-level component, you can pass it to the ReactDOM.render() method
+        ReactDOM.render(<HomePage />, app);
+      </script>
+
+    </body>
+    </html>
